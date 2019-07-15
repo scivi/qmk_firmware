@@ -18,18 +18,18 @@ Vagrant.configure(2) do |config|
     vb.gui = false
     # Uncomment the below lines if you want to program
     # your Teensy via the VM rather than your host OS
-    #vb.customize ['modifyvm', :id, '--usb', 'on']
-    #vb.customize ['usbfilter', 'add', '0',
-    #         '--target', :id,
-    #         '--name', 'teensy',
-    #         '--vendorid', '0x16c0',
-    #         '--productid','0x0478'
-    #        ]
+    vb.customize ['modifyvm', :id, '--usb', 'on']
+    vb.customize ['usbfilter', 'add', '0',
+             '--target', :id,
+             '--name', 'teensy',
+             '--vendorid', '0x16c0',
+             '--productid','0x0478'
+            ]
     # Customize the amount of memory on the VM:
-    vb.memory = "512"
+    vb.memory = "1536"
     # Uncomment the below lines if you have time sync
     # issues with make and incremental builds
-    #vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
+    vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
   end
 
   # This section allows you to customize the VMware VM
