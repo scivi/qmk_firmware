@@ -20,6 +20,7 @@ enum custom_keycodes {
 #define NAV_L   TO(_NAV)
 #define ADJ_L   TO(_ADJUST)
 
+#define KCS_RSSL RSHIFT_T(KC_SLSH)
 #define KC_ALAS LALT_T(KC_PAST)
 #define KC_CTES LCTL_T(KC_ESC)
 #define KC_CTQU RCTL_T(KC_QUOT)
@@ -43,9 +44,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
          KC_CTES, KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,KC_LBRC ,                          KC_ENT,  KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT ,
       //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-         KC_LSFT ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,ADJ_L   ,KC_DEL  ,        NAV_L   ,SYM_L   ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_RSFT ,
+         KC_LSFT ,KC_GRV  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,ADJ_L   ,KC_DEL  ,        NAV_L   ,SYM_L   ,KV_B    ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KCS_RSSL,
       //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-         KC_TILD ,KC_BSLS ,SYM_L   ,KC_LCTL ,     KC_LALT ,    KC_LGUI ,KC_SPC  ,        KC_SPC  ,KC_RGUI ,    KC_RALT ,     KC_RCTL ,SYM_L   ,KC_MINS , KC_LPRN
+         KC_TILD ,KC_BSLS ,SYM_L   ,KC_LCTL ,     KC_LALT ,    KC_LGUI ,KC_SPC  ,        KC_SPC  ,KC_RGUI ,    KC_RALT ,     KC_RCTL ,SYM_L   ,KC_MINS ,KC_LPRN
       //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
     ),
 
